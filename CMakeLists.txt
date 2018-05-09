@@ -3,4 +3,4 @@ project(CrossWords)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(CrossWords main.cpp cwplayer/Cwplayer.cpp cwplayer/Console.cpp cwplayer/Console.h cwplayer/FileManager.cpp cwplayer/FileManager.h)
+add_executable(CrossWords main.cpp cwplayer/Cwplayer.cpp cwplayer/Console.cpp cwplayer/Console.h cwplayer/FileManager.cpp cwplayer/FileManager.h cwplayer/GameBoard.cpp cwplayer/GameBoard.h cwplayer/Dictionary.cpp cwplayer/Dictionary.h cwplayer/Player.cpp cwplayer/Player.h)

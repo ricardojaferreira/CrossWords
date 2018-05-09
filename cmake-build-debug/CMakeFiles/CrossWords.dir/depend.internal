@@ -7,10 +7,27 @@ CMakeFiles/CrossWords.dir/cwplayer/Console.cpp.o
 CMakeFiles/CrossWords.dir/cwplayer/Cwplayer.cpp.o
  /Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/Console.h
  /Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/Cwplayer.cpp
+ /Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/Dictionary.h
+ /Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/FileManager.h
+ /Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/GameBoard.h
+ /Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/Player.h
+CMakeFiles/CrossWords.dir/cwplayer/Dictionary.cpp.o
+ /Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/Console.h
+ /Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/Dictionary.cpp
+ /Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/Dictionary.h
  /Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/FileManager.h
 CMakeFiles/CrossWords.dir/cwplayer/FileManager.cpp.o
  /Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/Console.h
  /Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/FileManager.cpp
  /Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/FileManager.h
+CMakeFiles/CrossWords.dir/cwplayer/GameBoard.cpp.o
+ /Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/Console.h
+ /Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/Dictionary.h
+ /Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/FileManager.h
+ /Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/GameBoard.cpp
+ /Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/GameBoard.h
+CMakeFiles/CrossWords.dir/cwplayer/Player.cpp.o
+ /Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/Player.cpp
+ /Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/Player.h
 CMakeFiles/CrossWords.dir/main.cpp.o
  /Users/ricardo/Documents/clion-workspace/CrossWords/main.cpp

@@ -177,6 +177,33 @@ cwplayer/Cwplayer.cpp.s:
 	$(MAKE) -f CMakeFiles/CrossWords.dir/build.make CMakeFiles/CrossWords.dir/cwplayer/Cwplayer.cpp.s
 .PHONY : cwplayer/Cwplayer.cpp.s
 
+cwplayer/Dictionary.o: cwplayer/Dictionary.cpp.o
+
+.PHONY : cwplayer/Dictionary.o
+
+# target to build an object file
+cwplayer/Dictionary.cpp.o:
+	$(MAKE) -f CMakeFiles/CrossWords.dir/build.make CMakeFiles/CrossWords.dir/cwplayer/Dictionary.cpp.o
+.PHONY : cwplayer/Dictionary.cpp.o
+
+cwplayer/Dictionary.i: cwplayer/Dictionary.cpp.i
+
+.PHONY : cwplayer/Dictionary.i
+
+# target to preprocess a source file
+cwplayer/Dictionary.cpp.i:
+	$(MAKE) -f CMakeFiles/CrossWords.dir/build.make CMakeFiles/CrossWords.dir/cwplayer/Dictionary.cpp.i
+.PHONY : cwplayer/Dictionary.cpp.i
+
+cwplayer/Dictionary.s: cwplayer/Dictionary.cpp.s
+
+.PHONY : cwplayer/Dictionary.s
+
+# target to generate assembly for a file
+cwplayer/Dictionary.cpp.s:
+	$(MAKE) -f CMakeFiles/CrossWords.dir/build.make CMakeFiles/CrossWords.dir/cwplayer/Dictionary.cpp.s
+.PHONY : cwplayer/Dictionary.cpp.s
+
 cwplayer/FileManager.o: cwplayer/FileManager.cpp.o
 
 .PHONY : cwplayer/FileManager.o
@@ -203,6 +230,60 @@ cwplayer/FileManager.s: cwplayer/FileManager.cpp.s
 cwplayer/FileManager.cpp.s:
 	$(MAKE) -f CMakeFiles/CrossWords.dir/build.make CMakeFiles/CrossWords.dir/cwplayer/FileManager.cpp.s
 .PHONY : cwplayer/FileManager.cpp.s
+
+cwplayer/GameBoard.o: cwplayer/GameBoard.cpp.o
+
+.PHONY : cwplayer/GameBoard.o
+
+# target to build an object file
+cwplayer/GameBoard.cpp.o:
+	$(MAKE) -f CMakeFiles/CrossWords.dir/build.make CMakeFiles/CrossWords.dir/cwplayer/GameBoard.cpp.o
+.PHONY : cwplayer/GameBoard.cpp.o
+
+cwplayer/GameBoard.i: cwplayer/GameBoard.cpp.i
+
+.PHONY : cwplayer/GameBoard.i
+
+# target to preprocess a source file
+cwplayer/GameBoard.cpp.i:
+	$(MAKE) -f CMakeFiles/CrossWords.dir/build.make CMakeFiles/CrossWords.dir/cwplayer/GameBoard.cpp.i
+.PHONY : cwplayer/GameBoard.cpp.i
+
+cwplayer/GameBoard.s: cwplayer/GameBoard.cpp.s
+
+.PHONY : cwplayer/GameBoard.s
+
+# target to generate assembly for a file
+cwplayer/GameBoard.cpp.s:
+	$(MAKE) -f CMakeFiles/CrossWords.dir/build.make CMakeFiles/CrossWords.dir/cwplayer/GameBoard.cpp.s
+.PHONY : cwplayer/GameBoard.cpp.s
+
+cwplayer/Player.o: cwplayer/Player.cpp.o
+
+.PHONY : cwplayer/Player.o
+
+# target to build an object file
+cwplayer/Player.cpp.o:
+	$(MAKE) -f CMakeFiles/CrossWords.dir/build.make CMakeFiles/CrossWords.dir/cwplayer/Player.cpp.o
+.PHONY : cwplayer/Player.cpp.o
+
+cwplayer/Player.i: cwplayer/Player.cpp.i
+
+.PHONY : cwplayer/Player.i
+
+# target to preprocess a source file
+cwplayer/Player.cpp.i:
+	$(MAKE) -f CMakeFiles/CrossWords.dir/build.make CMakeFiles/CrossWords.dir/cwplayer/Player.cpp.i
+.PHONY : cwplayer/Player.cpp.i
+
+cwplayer/Player.s: cwplayer/Player.cpp.s
+
+.PHONY : cwplayer/Player.s
+
+# target to generate assembly for a file
+cwplayer/Player.cpp.s:
+	$(MAKE) -f CMakeFiles/CrossWords.dir/build.make CMakeFiles/CrossWords.dir/cwplayer/Player.cpp.s
+.PHONY : cwplayer/Player.cpp.s
 
 main.o: main.cpp.o
 
@@ -246,9 +327,18 @@ help:
 	@echo "... cwplayer/Cwplayer.o"
 	@echo "... cwplayer/Cwplayer.i"
 	@echo "... cwplayer/Cwplayer.s"
+	@echo "... cwplayer/Dictionary.o"
+	@echo "... cwplayer/Dictionary.i"
+	@echo "... cwplayer/Dictionary.s"
 	@echo "... cwplayer/FileManager.o"
 	@echo "... cwplayer/FileManager.i"
 	@echo "... cwplayer/FileManager.s"
+	@echo "... cwplayer/GameBoard.o"
+	@echo "... cwplayer/GameBoard.i"
+	@echo "... cwplayer/GameBoard.s"
+	@echo "... cwplayer/Player.o"
+	@echo "... cwplayer/Player.i"
+	@echo "... cwplayer/Player.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

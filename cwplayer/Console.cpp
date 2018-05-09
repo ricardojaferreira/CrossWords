@@ -15,6 +15,11 @@ void Console::clrscr(void) {
     gotoxy(0, 0);
 }
 
+void Console::clrNgoTo(int x, int y){
+    cout << "\033[2J";
+    gotoxy(x, y);
+}
+
 // Set text color
 void Console::setcolor(string color) {
     cout << color;
@@ -29,8 +34,6 @@ void Console::printLine(string color, string backgroundColor, string text) {
     cout << color << backgroundColor << text << NO_COLOR << endl;
 }
 
-void Console::begin(){
-    clrscr();
-    cout << "WELCOME TO CROSSWORDS PUZZLE" << endl;
-    cout << "=============================================" << endl;
+void Console::printCharacter(string textColor, string bkgColor, char character){
+    cout << textColor << bkgColor << character << NO_COLOR;
 }

@@ -3,6 +3,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/CrossWords.dir/cwplayer/Cwplayer.cpp.o"
   "CMakeFiles/CrossWords.dir/cwplayer/Console.cpp.o"
   "CMakeFiles/CrossWords.dir/cwplayer/FileManager.cpp.o"
+  "CMakeFiles/CrossWords.dir/cwplayer/GameBoard.cpp.o"
+  "CMakeFiles/CrossWords.dir/cwplayer/Dictionary.cpp.o"
+  "CMakeFiles/CrossWords.dir/cwplayer/Player.cpp.o"
   "CrossWords.pdb"
   "CrossWords"
 )

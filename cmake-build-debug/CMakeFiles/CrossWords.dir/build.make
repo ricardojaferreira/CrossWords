@@ -153,12 +153,87 @@ CMakeFiles/CrossWords.dir/cwplayer/FileManager.cpp.o.provides: CMakeFiles/CrossW
 CMakeFiles/CrossWords.dir/cwplayer/FileManager.cpp.o.provides.build: CMakeFiles/CrossWords.dir/cwplayer/FileManager.cpp.o
 
 
+CMakeFiles/CrossWords.dir/cwplayer/GameBoard.cpp.o: CMakeFiles/CrossWords.dir/flags.make
+CMakeFiles/CrossWords.dir/cwplayer/GameBoard.cpp.o: ../cwplayer/GameBoard.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ricardo/Documents/clion-workspace/CrossWords/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/CrossWords.dir/cwplayer/GameBoard.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CrossWords.dir/cwplayer/GameBoard.cpp.o -c /Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/GameBoard.cpp
+
+CMakeFiles/CrossWords.dir/cwplayer/GameBoard.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CrossWords.dir/cwplayer/GameBoard.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/GameBoard.cpp > CMakeFiles/CrossWords.dir/cwplayer/GameBoard.cpp.i
+
+CMakeFiles/CrossWords.dir/cwplayer/GameBoard.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CrossWords.dir/cwplayer/GameBoard.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/GameBoard.cpp -o CMakeFiles/CrossWords.dir/cwplayer/GameBoard.cpp.s
+
+CMakeFiles/CrossWords.dir/cwplayer/GameBoard.cpp.o.requires:
+
+.PHONY : CMakeFiles/CrossWords.dir/cwplayer/GameBoard.cpp.o.requires
+
+CMakeFiles/CrossWords.dir/cwplayer/GameBoard.cpp.o.provides: CMakeFiles/CrossWords.dir/cwplayer/GameBoard.cpp.o.requires
+	$(MAKE) -f CMakeFiles/CrossWords.dir/build.make CMakeFiles/CrossWords.dir/cwplayer/GameBoard.cpp.o.provides.build
+.PHONY : CMakeFiles/CrossWords.dir/cwplayer/GameBoard.cpp.o.provides
+
+CMakeFiles/CrossWords.dir/cwplayer/GameBoard.cpp.o.provides.build: CMakeFiles/CrossWords.dir/cwplayer/GameBoard.cpp.o
+
+
+CMakeFiles/CrossWords.dir/cwplayer/Dictionary.cpp.o: CMakeFiles/CrossWords.dir/flags.make
+CMakeFiles/CrossWords.dir/cwplayer/Dictionary.cpp.o: ../cwplayer/Dictionary.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ricardo/Documents/clion-workspace/CrossWords/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/CrossWords.dir/cwplayer/Dictionary.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CrossWords.dir/cwplayer/Dictionary.cpp.o -c /Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/Dictionary.cpp
+
+CMakeFiles/CrossWords.dir/cwplayer/Dictionary.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CrossWords.dir/cwplayer/Dictionary.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/Dictionary.cpp > CMakeFiles/CrossWords.dir/cwplayer/Dictionary.cpp.i
+
+CMakeFiles/CrossWords.dir/cwplayer/Dictionary.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CrossWords.dir/cwplayer/Dictionary.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/Dictionary.cpp -o CMakeFiles/CrossWords.dir/cwplayer/Dictionary.cpp.s
+
+CMakeFiles/CrossWords.dir/cwplayer/Dictionary.cpp.o.requires:
+
+.PHONY : CMakeFiles/CrossWords.dir/cwplayer/Dictionary.cpp.o.requires
+
+CMakeFiles/CrossWords.dir/cwplayer/Dictionary.cpp.o.provides: CMakeFiles/CrossWords.dir/cwplayer/Dictionary.cpp.o.requires
+	$(MAKE) -f CMakeFiles/CrossWords.dir/build.make CMakeFiles/CrossWords.dir/cwplayer/Dictionary.cpp.o.provides.build
+.PHONY : CMakeFiles/CrossWords.dir/cwplayer/Dictionary.cpp.o.provides
+
+CMakeFiles/CrossWords.dir/cwplayer/Dictionary.cpp.o.provides.build: CMakeFiles/CrossWords.dir/cwplayer/Dictionary.cpp.o
+
+
+CMakeFiles/CrossWords.dir/cwplayer/Player.cpp.o: CMakeFiles/CrossWords.dir/flags.make
+CMakeFiles/CrossWords.dir/cwplayer/Player.cpp.o: ../cwplayer/Player.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ricardo/Documents/clion-workspace/CrossWords/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/CrossWords.dir/cwplayer/Player.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CrossWords.dir/cwplayer/Player.cpp.o -c /Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/Player.cpp
+
+CMakeFiles/CrossWords.dir/cwplayer/Player.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CrossWords.dir/cwplayer/Player.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/Player.cpp > CMakeFiles/CrossWords.dir/cwplayer/Player.cpp.i
+
+CMakeFiles/CrossWords.dir/cwplayer/Player.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CrossWords.dir/cwplayer/Player.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/Player.cpp -o CMakeFiles/CrossWords.dir/cwplayer/Player.cpp.s
+
+CMakeFiles/CrossWords.dir/cwplayer/Player.cpp.o.requires:
+
+.PHONY : CMakeFiles/CrossWords.dir/cwplayer/Player.cpp.o.requires
+
+CMakeFiles/CrossWords.dir/cwplayer/Player.cpp.o.provides: CMakeFiles/CrossWords.dir/cwplayer/Player.cpp.o.requires
+	$(MAKE) -f CMakeFiles/CrossWords.dir/build.make CMakeFiles/CrossWords.dir/cwplayer/Player.cpp.o.provides.build
+.PHONY : CMakeFiles/CrossWords.dir/cwplayer/Player.cpp.o.provides
+
+CMakeFiles/CrossWords.dir/cwplayer/Player.cpp.o.provides.build: CMakeFiles/CrossWords.dir/cwplayer/Player.cpp.o
+
+
 # Object files for target CrossWords
 CrossWords_OBJECTS = \
 "CMakeFiles/CrossWords.dir/main.cpp.o" \
 "CMakeFiles/CrossWords.dir/cwplayer/Cwplayer.cpp.o" \
 "CMakeFiles/CrossWords.dir/cwplayer/Console.cpp.o" \
-"CMakeFiles/CrossWords.dir/cwplayer/FileManager.cpp.o"
+"CMakeFiles/CrossWords.dir/cwplayer/FileManager.cpp.o" \
+"CMakeFiles/CrossWords.dir/cwplayer/GameBoard.cpp.o" \
+"CMakeFiles/CrossWords.dir/cwplayer/Dictionary.cpp.o" \
+"CMakeFiles/CrossWords.dir/cwplayer/Player.cpp.o"
 
 # External object files for target CrossWords
 CrossWords_EXTERNAL_OBJECTS =
@@ -167,9 +242,12 @@ CrossWords: CMakeFiles/CrossWords.dir/main.cpp.o
 CrossWords: CMakeFiles/CrossWords.dir/cwplayer/Cwplayer.cpp.o
 CrossWords: CMakeFiles/CrossWords.dir/cwplayer/Console.cpp.o
 CrossWords: CMakeFiles/CrossWords.dir/cwplayer/FileManager.cpp.o
+CrossWords: CMakeFiles/CrossWords.dir/cwplayer/GameBoard.cpp.o
+CrossWords: CMakeFiles/CrossWords.dir/cwplayer/Dictionary.cpp.o
+CrossWords: CMakeFiles/CrossWords.dir/cwplayer/Player.cpp.o
 CrossWords: CMakeFiles/CrossWords.dir/build.make
 CrossWords: CMakeFiles/CrossWords.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ricardo/Documents/clion-workspace/CrossWords/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable CrossWords"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ricardo/Documents/clion-workspace/CrossWords/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable CrossWords"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CrossWords.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -181,6 +259,9 @@ CMakeFiles/CrossWords.dir/requires: CMakeFiles/CrossWords.dir/main.cpp.o.require
 CMakeFiles/CrossWords.dir/requires: CMakeFiles/CrossWords.dir/cwplayer/Cwplayer.cpp.o.requires
 CMakeFiles/CrossWords.dir/requires: CMakeFiles/CrossWords.dir/cwplayer/Console.cpp.o.requires
 CMakeFiles/CrossWords.dir/requires: CMakeFiles/CrossWords.dir/cwplayer/FileManager.cpp.o.requires
+CMakeFiles/CrossWords.dir/requires: CMakeFiles/CrossWords.dir/cwplayer/GameBoard.cpp.o.requires
+CMakeFiles/CrossWords.dir/requires: CMakeFiles/CrossWords.dir/cwplayer/Dictionary.cpp.o.requires
+CMakeFiles/CrossWords.dir/requires: CMakeFiles/CrossWords.dir/cwplayer/Player.cpp.o.requires
 
 .PHONY : CMakeFiles/CrossWords.dir/requires
 

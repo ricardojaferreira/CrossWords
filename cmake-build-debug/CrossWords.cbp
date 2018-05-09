@@ -91,10 +91,28 @@
 		<Unit filename="/Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/Cwplayer.cpp">
 			<Option target="CrossWords"/>
 		</Unit>
+		<Unit filename="/Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/Dictionary.cpp">
+			<Option target="CrossWords"/>
+		</Unit>
+		<Unit filename="/Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/Dictionary.h">
+			<Option target="CrossWords"/>
+		</Unit>
 		<Unit filename="/Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/FileManager.cpp">
 			<Option target="CrossWords"/>
 		</Unit>
 		<Unit filename="/Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/FileManager.h">
+			<Option target="CrossWords"/>
+		</Unit>
+		<Unit filename="/Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/GameBoard.cpp">
+			<Option target="CrossWords"/>
+		</Unit>
+		<Unit filename="/Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/GameBoard.h">
+			<Option target="CrossWords"/>
+		</Unit>
+		<Unit filename="/Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/Player.cpp">
+			<Option target="CrossWords"/>
+		</Unit>
+		<Unit filename="/Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/Player.h">
 			<Option target="CrossWords"/>
 		</Unit>
 		<Unit filename="/Users/ricardo/Documents/clion-workspace/CrossWords/main.cpp">

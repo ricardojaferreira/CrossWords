@@ -8,6 +8,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <vector>
 #include "Console.h"
 
 using namespace std;
@@ -17,14 +18,24 @@ class FileManager {
         fstream file;
         string line;
         Console console;
+        vector<string> fileLines;
+        int actualLine = 0;
+        bool endOfLines = false;
+
     public:
         FileManager(string fileName);
-        //fstream getFile();
+        void convFileToVector();
+        bool hasMoreLines();
+        string getNextLine();
+        vector<string> getAllLines();
         void setFile(string fileName);
         bool isOpen();
         void printOnScreen();
-        void printBoard();
+        //void printBoard();
         void closeFileStream();
+        //aux functions
+        string trimSpaces(string s);
+        vector<string> explode(char c, string s);
 };
 
 

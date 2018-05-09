@@ -48,9 +48,10 @@ class Console {
         void setcolor(string color);
         void setcolor(string color, string background_color);
         void printLine(string color, string backgroundColor, string text);
+        void printCharacter(string textColor, string bkgColor, char character);
+        void clrNgoTo(int x, int y);
         int getConsoleRows();
         int getConsoleColumns();
-        void begin();
 };
 
 
