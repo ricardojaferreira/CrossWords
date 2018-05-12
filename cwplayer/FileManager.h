@@ -23,6 +23,7 @@ class FileManager {
         bool endOfLines = false;
 
     public:
+        FileManager();
         FileManager(string fileName);
         void convFileToVector();
         bool hasMoreLines();
@@ -36,6 +37,7 @@ class FileManager {
         //aux functions
         string trimSpaces(string s);
         vector<string> explode(char c, string s);
+        int save(string filename, string playerScore);
 };
 
 

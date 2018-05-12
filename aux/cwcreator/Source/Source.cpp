@@ -4,7 +4,7 @@
 using namespace std;
 
 //Save current Board, its user inputs, and the dictionary used to a text file
-void save(vector<vector<char>> v1, vector<vector<string>> v2, string dicName) {
+void save(vector<vector<char> > v1, vector<vector<string> > v2, string dicName) {
 
 	ofstream txtFile;
 	string filename;
@@ -31,7 +31,7 @@ void save(vector<vector<char>> v1, vector<vector<string>> v2, string dicName) {
 }
 
 //Remove entry from userInputs
-bool del(vector<vector <string>> &userInputs, string posDir) {
+bool del(vector<vector <string> > &userInputs, string posDir) {
 	int line = -1;
 	//Find the correct index on the vector
 	for (size_t i = 0; i < userInputs.size(); i++) {
@@ -63,9 +63,9 @@ bool del(vector<vector <string>> &userInputs, string posDir) {
 //Build new or reloaded Board
 void boardBuilding(string dictFilename, board b1, dictionary d1, int x, int y) {
 
-	vector<vector <string>>		dictionaryWordList = d1.returnWordList();
-	vector<vector <string>>		userInputs = b1.returnUserInputs();
-	vector<vector <char>>		boardContents;
+	vector<vector <string> >		dictionaryWordList = d1.returnWordList();
+	vector<vector <string> >		userInputs = b1.returnUserInputs();
+	vector<vector <char> >		boardContents;
 	char fullUserAnswer;
 
 	//Keep asking for position/direction and word until user finishes the board or enters (CTRL-Z)

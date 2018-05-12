@@ -7,6 +7,7 @@
 
 
 #include <iostream>
+#include "iomanip"
 #include <string>
 #include <map>
 #include "FileManager.h"
@@ -16,8 +17,12 @@ class GameBoard {
     private:
         int boardWidth = 0;
         int boardHeight = 0;
+        bool boardCorrect = false;
         vector<string> boardLines;
         map<string,string> solutions;
+        map<string,string> userInputs;
+        map<string, string> horizontals;
+        map<string, string> verticals;
         map<string, vector<string>> synomys;
         vector<vector <char>> boardMatrix;
         FileManager file;
@@ -27,12 +32,23 @@ class GameBoard {
         void addToBoard(string s);
         void addSolution(string s);
         void getSynonyms();
+        void getClues();
+        int updateBoardHorizontal(string direction, string word, bool insert = false);
+        int updateBoardVertical(string direction, string word, bool insert = false);
+        void updateUserInputs(string direction, string word);
     public:
         GameBoard(string board, string wordFile);
+        bool isFull();
+        bool isCorrect();
+        int validateOption(string direction, string word="");
         int getBoardWidth();
         int getBoardHeight();
         bool isGood();
-        void printBoard();
+        void checkAnswers();
+        void updateClue(string direction);
+        void print();
+        void printClues();
+        void printClue(string direction);
 };
 
 

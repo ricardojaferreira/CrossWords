@@ -40,20 +40,20 @@ public:
 	void reloadBoard();
 	void reloadUserInputs();
 	bool alter(std::string position, std::string word);
-	void del(std::vector<std::vector<std::string>> userInputs);
+	void del(std::vector<std::vector<std::string> > userInputs);
 	void show();
 	void finish();
 
-	std::vector<std::vector<std::string>> returnUserInputs();
-	std::vector<std::vector<char>> returnWordTable();
+	std::vector<std::vector<std::string> > returnUserInputs();
+	std::vector<std::vector<char> > returnWordTable();
 	int retX();
 	int retY();
 
 private:
 	int x, y;
-	std::vector <std::vector<char>> wordTable;
+	std::vector <std::vector<char> > wordTable;
 	std::vector<std::string> savedContents;
-	std::vector<std::vector<std::string>> savedUserInputs;
+	std::vector<std::vector<std::string> > savedUserInputs;
 };
 
 //dictionary.cpp
@@ -63,17 +63,17 @@ public:
 	void buildList();
 	std::vector<std::string> suggested(std::string word);
 	std::string wordPrep(std::string word);
-	std::vector <std::vector<std::string>> returnWordList();
+	std::vector <std::vector<std::string> > returnWordList();
 private:
 	std::string file;
 	std::string word;
-	std::vector <std::vector<std::string>> wordList;
+	std::vector <std::vector<std::string> > wordList;
 };
 
 //verifications.cpp
-bool correctUserInputs(std::vector<std::vector<std::string>> userInputs, dictionary d1);
+bool correctUserInputs(std::vector<std::vector<std::string> > userInputs, dictionary d1);
 bool correctPosDir(std::string posDir, int x, int y);
 bool wordFitsBoard(int x, int y, std::string posDir, int wordLength);
-bool existingWord(std::vector<std::vector <std::string>> v1, std::string word);
-bool dictionaryWord(std::string word, std::vector<std::vector <std::string>> v1);
+bool existingWord(std::vector<std::vector <std::string> > v1, std::string word);
+bool dictionaryWord(std::string word, std::vector<std::vector <std::string> > v1);
 bool simpleWord(std::string word);

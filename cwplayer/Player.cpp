@@ -4,6 +4,7 @@
 
 #include <iomanip>
 #include "Player.h"
+#include "Console.h"
 
 void Player::setName(string cName) {
     Player::name = cName;
@@ -37,8 +38,28 @@ void Player::updateElapsedTime() {
     Player::elapsedTime = (Player::end - Player::start);
 }
 
+void Player::incrementAltClues() {
+    Player::altClues++;
+}
+
 void Player::printElapsedInSeconds() {
     Player::updateEndTime();
     Player::updateElapsedTime();
     cout << Player::elapsedTime << "s";
+}
+
+void Player::printAlternativeClues() {
+    if(Player::altClues <= 5){
+        cout << GREEN << "Alternative Clues: " << Player::altClues << NO_COLOR << endl;
+    } else {
+        if(Player::altClues <= 10){
+            cout << YELLOW << "Alternative Clues: " << Player::altClues << NO_COLOR << endl;
+        } else {
+            cout << RED << "Alternative Clues: " << Player::altClues << NO_COLOR << endl;
+        }
+    }
+
+
+
+
 }

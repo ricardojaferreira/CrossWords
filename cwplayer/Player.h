@@ -15,10 +15,13 @@ class Player {
         string name = "";
         time_t start;
         time_t end;
+        int altClues = 0;
         double elapsedTime = 0;
     public:
         void setName(string cName);
         string getName();
+        void incrementAltClues();
+        void printAlternativeClues();
         void updateStartTime();
         void printStartTime();
         void updateEndTime();

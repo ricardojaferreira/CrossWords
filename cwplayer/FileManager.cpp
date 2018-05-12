@@ -2,7 +2,12 @@
 // Created by Ricardo Ferreira on 07/05/2018.
 //
 
+#include <iomanip>
 #include "FileManager.h"
+
+FileManager::FileManager(){
+
+}
 
 FileManager::FileManager(string fileName) {
     FileManager::file.open(fileName);
@@ -91,35 +96,26 @@ void FileManager::printOnScreen(){
     }
 }
 
-/*void FileManager::printBoard(){
-    int prevChar = 0;
-    while(!FileManager::file.eof()){
-        getline(FileManager::file, line);
-        for(int i=0; i<line.length(); i++){
-            if(line[i] == '#'){
-                for(int j=0; j<line.length(); j++){
-                    switch(line[j]){
-                        case '#':   console.printCharacter(RED, BLACK_B, ' ');
-                                    break;
-                        case ' ':   (prevChar >= 65 && prevChar <= 90) ?
-                                            console.printCharacter(GREEN, WHITE_B, ' '):
-                                            console.printCharacter(RED, BLACK_B, line[j]);
-                                    break;
-                        default:    console.printCharacter(BLUE, WHITE_B, '-');
-                                    break;
-                    }
-                    prevChar = line[j];
-
-                }
-                cout << endl;
-                goto cnt;
-            }
-        }
-        cnt:;
-    }
-
-}*/
-
 void FileManager::closeFileStream() {
     FileManager::file.close();
+}
+
+int FileManager::save(string filename, string playerScore) {
+    ifstream check(filename);
+    ofstream scoreBoard(filename, ios::app);
+    if(!check.good()){
+      scoreBoard << setfill('-') << setw(60) << '-' << endl;
+      scoreBoard << "| " << setfill(' ') << setw(57) << left << "SCORE BOARD - PUZZLE b001";
+      scoreBoard << "|";
+      scoreBoard << endl;
+      scoreBoard << setfill('-') << setw(60) << '-' << endl;
+    }
+
+    scoreBoard << "| " << setfill(' ') << setw(57) << left << playerScore;
+    scoreBoard << "|";
+    scoreBoard << endl;
+    scoreBoard << setfill('-') << setw(60) << '-' << endl;
+    check.close();
+    scoreBoard.close();
+    return 1;
 }

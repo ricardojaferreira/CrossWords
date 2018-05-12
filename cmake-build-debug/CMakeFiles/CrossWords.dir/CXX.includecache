@@ -45,6 +45,8 @@ FileManager.h
 /Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/FileManager.h
 
 /Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/FileManager.cpp
+iomanip
+-
 FileManager.h
 /Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/FileManager.h
 
@@ -67,6 +69,8 @@ GameBoard.h
 /Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/GameBoard.h
 iostream
 -
+iomanip
+/Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/iomanip
 string
 -
 map
@@ -81,6 +85,8 @@ iomanip
 -
 Player.h
 /Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/Player.h
+Console.h
+/Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/Console.h
 
 /Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/Player.h
 iostream

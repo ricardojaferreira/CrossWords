@@ -26,6 +26,7 @@ CMakeFiles/CrossWords.dir/cwplayer/GameBoard.cpp.o: ../cwplayer/FileManager.h
 CMakeFiles/CrossWords.dir/cwplayer/GameBoard.cpp.o: ../cwplayer/GameBoard.cpp
 CMakeFiles/CrossWords.dir/cwplayer/GameBoard.cpp.o: ../cwplayer/GameBoard.h
 
+CMakeFiles/CrossWords.dir/cwplayer/Player.cpp.o: ../cwplayer/Console.h
 CMakeFiles/CrossWords.dir/cwplayer/Player.cpp.o: ../cwplayer/Player.cpp
 CMakeFiles/CrossWords.dir/cwplayer/Player.cpp.o: ../cwplayer/Player.h
 
