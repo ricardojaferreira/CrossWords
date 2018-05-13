@@ -27,6 +27,8 @@ sys/ioctl.h
 /Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/Cwplayer.cpp
 iomanip
 -
+sstream
+-
 GameBoard.h
 /Users/ricardo/Documents/clion-workspace/CrossWords/cwplayer/GameBoard.h
 Player.h

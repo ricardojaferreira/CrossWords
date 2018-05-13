@@ -104,17 +104,17 @@ int FileManager::save(string filename, string playerScore) {
     ifstream check(filename);
     ofstream scoreBoard(filename, ios::app);
     if(!check.good()){
-      scoreBoard << setfill('-') << setw(60) << '-' << endl;
-      scoreBoard << "| " << setfill(' ') << setw(57) << left << "SCORE BOARD - PUZZLE b001";
+      scoreBoard << setfill('-') << setw(120) << '-' << endl;
+      scoreBoard << "| " << setfill(' ') << setw(117) << left << "SCORE BOARD - PUZZLE " + filename.substr(12,4);
       scoreBoard << "|";
       scoreBoard << endl;
-      scoreBoard << setfill('-') << setw(60) << '-' << endl;
+      scoreBoard << setfill('-') << setw(120) << '-' << endl;
     }
 
-    scoreBoard << "| " << setfill(' ') << setw(57) << left << playerScore;
+    scoreBoard << "| " << setfill(' ') << setw(117) << left << playerScore;
     scoreBoard << "|";
     scoreBoard << endl;
-    scoreBoard << setfill('-') << setw(60) << '-' << endl;
+    scoreBoard << setfill('-') << setw(120) << '-' << endl;
     check.close();
     scoreBoard.close();
     return 1;

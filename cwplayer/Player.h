@@ -20,6 +20,8 @@ class Player {
     public:
         void setName(string cName);
         string getName();
+        int getAlternativeClues();
+        double getElapsedTime();
         void incrementAltClues();
         void printAlternativeClues();
         void updateStartTime();
