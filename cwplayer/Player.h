@@ -6,18 +6,21 @@
 #define CROSSWORDS_PLAYER_H
 
 #include <iostream>
+#include <iomanip>
 #include <string>
+#include "Console.h"
 
 using namespace std;
 
 class Player {
     private:
-        string name = "";
+        string name;
         time_t start;
         time_t end;
-        int altClues = 0;
-        double elapsedTime = 0;
+        int altClues;
+        double elapsedTime;
     public:
+        Player();
         void setName(string cName);
         string getName();
         int getAlternativeClues();

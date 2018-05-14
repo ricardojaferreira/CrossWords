@@ -6,7 +6,6 @@
 #include <sstream>
 #include "GameBoard.h"
 #include "Player.h"
-
 #include "dirent.h"
 
 bool gameStart = false;

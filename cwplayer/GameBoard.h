@@ -15,19 +15,19 @@
 
 class GameBoard {
     private:
-        int boardWidth = 0;
-        int boardHeight = 0;
-        bool boardCorrect = false;
-        vector<string> boardLines;
-        map<string,string> solutions;
-        map<string,string> userInputs;
-        map<string, string> horizontals;
-        map<string, string> verticals;
-        map<string, vector<string>> synomys;
-        vector<vector <char>> boardMatrix;
+        int boardWidth;
+        int boardHeight;
+        bool boardCorrect;
+        vector< string > boardLines;
+        map< string,string > solutions;
+        map< string,string > userInputs;
+        map< string, string > horizontals;
+        map< string, string > verticals;
+        map< string, vector<string> > synomys;
+        vector< vector <char> > boardMatrix;
         FileManager file;
         Dictionary dictionary;
-        bool error = false;
+        bool error;
         void processLines();
         void addToBoard(string s);
         void addSolution(string s);

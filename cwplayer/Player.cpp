@@ -2,9 +2,13 @@
 // Created by Ricardo Ferreira on 08/05/2018.
 //
 
-#include <iomanip>
 #include "Player.h"
-#include "Console.h"
+
+Player::Player(){
+    Player::name = "";
+    Player::altClues = 0;
+    Player::elapsedTime = 0;
+}
 
 void Player::setName(string cName) {
     Player::name = cName;

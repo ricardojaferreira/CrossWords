@@ -17,6 +17,8 @@ GameBoard::GameBoard(string board, string wordFile) : file(board), dictionary(wo
     GameBoard::getClues();
     GameBoard::boardWidth = GameBoard::boardMatrix[0].size();
     GameBoard::boardHeight = GameBoard::boardMatrix.size();
+    GameBoard::boardCorrect=false;
+    GameBoard::error = false;
 }
 
 void GameBoard::processLines() {

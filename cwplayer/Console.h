@@ -15,6 +15,7 @@ using namespace std;
 
 #define COUT_SIZE 56
 
+#ifdef __MAC_OS_X_VERSION_MIN_REQUIRED
 #define NO_COLOR "\033[0m"
 #define BLACK "\033[0;30m"
 #define RED "\033[0;31m"
@@ -42,6 +43,9 @@ using namespace std;
 #define CYAN_B "\033[0;46m"
 #define WHITE_B "\033[1;47m"
 
+#elif _WIN32
+//windows
+#endif
 
 class Console {
     public:

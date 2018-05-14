@@ -6,6 +6,7 @@
 #define CROSSWORDS_FILEMANAGER_H
 
 #include <iostream>
+#include <iomanip>
 #include <fstream>
 #include <string>
 #include <vector>
@@ -18,9 +19,9 @@ class FileManager {
         fstream file;
         string line;
         Console console;
-        vector<string> fileLines;
-        int actualLine = 0;
-        bool endOfLines = false;
+        vector< string > fileLines;
+        int actualLine;
+        bool endOfLines;
 
     public:
         FileManager();

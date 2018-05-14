@@ -11,14 +11,14 @@
 
 class Dictionary {
     private:
-        map<string, vector<string>> matchedWords;
+        map< string, vector<string> > matchedWords;
         FileManager dictionary;
         string trimSpaces(string s);
         string getHeader(string s);
-        vector<string> getSynonyms(size_t begin, string s);
+        vector< string > getSynonyms(size_t begin, string s);
     public:
         Dictionary(string fileName);
-        map<string, vector<string>> getMatchedWord(string word);
+        map< string, vector<string> > getMatchedWord(string word);
         bool isOpen();
         void open();
         void close();

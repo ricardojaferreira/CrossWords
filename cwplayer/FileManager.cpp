@@ -2,15 +2,17 @@
 // Created by Ricardo Ferreira on 07/05/2018.
 //
 
-#include <iomanip>
 #include "FileManager.h"
 
 FileManager::FileManager(){
-
+    FileManager::actualLine = 0;
+    FileManager::endOfLines = false;
 }
 
 FileManager::FileManager(string fileName) {
     FileManager::file.open(fileName);
+    FileManager::actualLine = 0;
+    FileManager::endOfLines = false;
 }
 
 string FileManager::trimSpaces(string s) {
