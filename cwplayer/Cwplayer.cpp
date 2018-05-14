@@ -11,7 +11,7 @@
 
 bool gameStart = false;
 
-int welcome(Player *p){
+int welcome(Player *p, string message = ""){
     string name;
     Console console;
     bool validName = false;
@@ -19,6 +19,10 @@ int welcome(Player *p){
     int option;
     cout << "WELCOME TO CROSSWORDS PUZZLE" << endl;
     cout << setfill('=') << setw(COUT_SIZE) << '=' << endl;
+    if(message != ""){
+        cout << LIGHTBLUE << message << NO_COLOR << endl;
+        cout << LIGHTBLUE << setfill('-') << setw(COUT_SIZE) << '-' << NO_COLOR << endl;
+    }
     cout << "   > 0: Start a new Game;" << endl;
     cout << "   > 1: View Score Boards;" << endl;
     cout << "   > 2: Exit;" << endl;
@@ -34,48 +38,67 @@ int welcome(Player *p){
                 case 2: return 2;
                 default: cout << "Invalid option!" << endl;
             }
+        } else {
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
         }
-        cin.clear();
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
     }
 
     if(p->getName().length()>0){
-        return 0;
-    } else {
-        cout << "What is your name ? : ";
-        while(!validName){
-            getline(cin, name);
-            if(name.length() > 0 && !cin.fail()){
-                for(int i=0; i<name.length(); i++){
-                    if((name[i] >= 'A' && name[i] <= 'Z') || (name[i] >= 'a' && name[i] <= 'z') || name[i] == ' '){
-                        validName = true;
-                    } else {
-                        validName = false;
-                        console.clrNgoTo(0,0);
-                        cout << "WELCOME TO CROSSWORDS PUZZLE" << endl;
-                        cout << setfill('=') << setw(COUT_SIZE) << '=' << endl;
-                        cerr << RED << "Please use only letters." << NO_COLOR << endl;
-                        cout << RED << setfill('-') << setw(COUT_SIZE) << '-' << NO_COLOR << endl;
-                        cout << "Please enter your name ? : ";
-                        break;
-                    }
+        char change = ' ';
+        while(change != 'y' && change != 'n'){
+            if(!cin.fail() && !cin.eof()){
+                cout << "Change player (y/n)? ";
+                cin >> change;
+                if(change == 'n'){
+                    return 0;
                 }
+                if(change == 'y'){
+                    break;
+                }
+                cout << "Invalid option." << endl;
             } else {
                 cin.clear();
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                console.clrNgoTo(0,0);
-                cout << "WELCOME TO CROSSWORDS PUZZLE" << endl;
-                cout << setfill('=') << setw(COUT_SIZE) << '=' << endl;
-                cerr << RED << "The name cannot be empty." << NO_COLOR << endl;
-                cout << RED << setfill('-') << setw(COUT_SIZE) << '-' << NO_COLOR << endl;
-                cout << "Please enter your name ? : ";
             }
-            if(validName){
-                p->setName(name);
-            }
+
         }
-        return 0;
     }
+
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    cout << "What is your name ? : ";
+    while(!validName){
+        getline(cin, name);
+        if(name.length() > 0 && !cin.fail()){
+            for(int i=0; i<name.length(); i++){
+                if((name[i] >= 'A' && name[i] <= 'Z') || (name[i] >= 'a' && name[i] <= 'z') || name[i] == ' '){
+                    validName = true;
+                } else {
+                    validName = false;
+                    console.clrNgoTo(0,0);
+                    cout << "WELCOME TO CROSSWORDS PUZZLE" << endl;
+                    cout << setfill('=') << setw(COUT_SIZE) << '=' << endl;
+                    cerr << RED << "Please use only letters." << NO_COLOR << endl;
+                    cout << RED << setfill('-') << setw(COUT_SIZE) << '-' << NO_COLOR << endl;
+                    cout << "Please enter your name ? : ";
+                    break;
+                }
+            }
+        } else {
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            console.clrNgoTo(0,0);
+            cout << "WELCOME TO CROSSWORDS PUZZLE" << endl;
+            cout << setfill('=') << setw(COUT_SIZE) << '=' << endl;
+            cerr << RED << "The name cannot be empty." << NO_COLOR << endl;
+            cout << RED << setfill('-') << setw(COUT_SIZE) << '-' << NO_COLOR << endl;
+            cout << "Please enter your name ? : ";
+        }
+        if(validName){
+            p->setName(name);
+        }
+    }
+    return 0;
 }
 
 void printHeader(Player *p, string puzzle = "", char op='a'){
@@ -105,17 +128,19 @@ void printHeader(Player *p, string puzzle = "", char op='a'){
     cout << BLUE << setfill('-') << setw(COUT_SIZE) << '-' << NO_COLOR << endl;
 }
 
-int showAvailablePuzzles(vector<string> &v){
-    cout << "Please choose one of the available Puzzles" << endl;
-    cout << endl;
+int showAvailableFiles(string location, vector<string> &v){
+    if(v.size() > 0){
+        v.clear();
+    }
 
+    int position = -1;
     DIR *dir;
     struct dirent *ent;
-    if ((dir = opendir ("puzzles/")) != NULL) {
+    if ((dir = opendir (&location[0])) != NULL) {
         /* print all the files and directories within directory */
         while ((ent = readdir (dir)) != NULL) {
             string s = ent->d_name;
-            //print only the puzzle files
+            //print only the files started with b
             if(s[0] == 'b'){
                 cout << "  --> " << s << endl;
                 v.push_back(s);
@@ -123,10 +148,38 @@ int showAvailablePuzzles(vector<string> &v){
         }
         closedir (dir);
         cout << endl;
-        return 1;
-    } else {
-        return 0;
     }
+
+    if(v.size() > 0){
+        string temp = "";
+        cout << "Type the name of the file: ";
+        while(position == -1){
+            cin >> temp;
+            if(!cin.fail()){
+                for(int i=0; i<v.size(); i++){
+                    if(!temp.compare(v[i])){
+                        position = i;
+                        break;
+                    }
+                }
+                if(position == -1){
+                    cout << endl;
+                    cout << "Invalid file name, please choose another: ";
+                    cin.clear();
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                }
+            } else {
+                cout << endl;
+                cout << "Something went wrong, please try again: ";
+                cin.clear();
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            }
+        }
+        return position;
+    } else {
+        return 99;
+    }
+
 }
 
 bool abandonGame(){
@@ -157,11 +210,37 @@ int main()
 {
     Player p1;
     Console console;
-    int startOption = welcome(&p1);
+    string message = "";
+    strt:
+    int startOption = welcome(&p1, message);
+    message = "";
+    vector<string> puzzles;
+    int position = -1;
     //process option;
     switch(startOption){
         case 0: break;
-        case 1: break;
+        case 1: cout << setfill('-') << setw(COUT_SIZE) << '-' << endl;
+                cout << "Choose one of the available Score Boards" << endl;
+                cout << endl;
+                position = showAvailableFiles("scoreboards/",puzzles);
+                if(position < 99){
+                    FileManager scoreBoard("scoreboards/"+puzzles.at(position));
+                    console.clrNgoTo(0,0);
+                    scoreBoard.printOnScreen();
+                    cout << endl;
+                    cout << endl;
+                    cout << "Press enter to continue: ";
+                    cin.get();
+                    cin.clear();
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                    console.clrNgoTo(0,0);
+                    goto strt;
+                } else {
+                    cout << endl;
+                    message = "There are no Score Boards yet. \nMaybe you can be the first one!";
+                    console.clrNgoTo(0,0);
+                    goto strt;
+                }
         case 2: return 0;
     }
     string aux;
@@ -169,33 +248,15 @@ int main()
     p1.updateStartTime();
     console.clrscr();
     printHeader(&p1);
-    vector<string> puzzles;
-    int position = -1;
-    if(showAvailablePuzzles(puzzles)){
-        string temp = "";
-        cout << "Type the name of the file: ";
-        while(position == -1){
-            cin >> temp;
-            if(!cin.fail()){
-                for(int i=0; i<puzzles.size(); i++){
-                    if(!temp.compare(puzzles[i])){
-                        position = i;
-                        break;
-                    }
-                }
-                if(position == -1){
-                    cout << endl;
-                    cout << "Invalid file name, please choose another: ";
-                    cin.clear();
-                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                }
-            } else {
-                cout << endl;
-                cout << "Something went wrong, please try again: ";
-                cin.clear();
-                cin.ignore(numeric_limits<streamsize>::max(), '\n');
-            }
-        }
+    cout << "Choose one of the available Puzzles" << endl;
+    cout << endl;
+    position = showAvailableFiles("puzzles/", puzzles);
+
+    if(position == 99){
+        cout << endl;
+        message = "There are no available Puzzles :(!";
+        console.clrNgoTo(0,0);
+        goto strt;
     }
 
     GameBoard board ("puzzles/"+puzzles.at(position), "Dictionary/Dictionary.txt");
@@ -249,7 +310,7 @@ int main()
 
         //possibility to change location without typing the word
 
-        //Small Hack
+        //Hack: Save without filling the board
         if(boardPos=="&"){
             break;
         }
@@ -347,6 +408,7 @@ int main()
             cout << setfill('-') << setw(COUT_SIZE) << '-' << endl;
     }
 
+    //save data
     string scrLocation = "scoreboards/";
     scrLocation += puzzles.at(position).substr(0, 4);
     scrLocation += "_p.txt";
@@ -360,8 +422,10 @@ int main()
 
     FileManager file;
     file.save(scrLocation, playerInfo);
-
-    return 0;
+    message = "Well Done! Score saved!";
+    gameStart = false;
+    console.clrNgoTo(0,0);
+    goto strt;
 
 }
 
